@@ -1,6 +1,11 @@
 # Botpress Connect
 Connect RocketChat to Botpress
 
+To use this app, create a user in Rocket.Chat of type bot. Then go to the app settings of the Botpress Connector. 
+Add the name of you Rocket.Chat user, the ID of you Botpress bot (you see it in the URL of you bot in Botpress) and add the URL of your Botserver. 
+Save the settings. 
+Now you can start a direct message with you bot user. All your messages are only visible to you. It's like a normal conversations with other chat users.
+
 ## Getting Started
 Now that you have generated a blank default Rocket.Chat App, what are you supposed to do next?
 Start developing! Open up your favorite editor, our recommended one is Visual Studio code,
@@ -23,16 +28,6 @@ Here are some links to examples and documentation:
 - [#rocketchat-apps on Open.Rocket.Chat](https://open.rocket.chat/channel/rocketchat-apps)
 
 
-## App Settings for Testing
-Create a new User with role "Bot" with the Name Pablo
 
-- Bot URL: http://bots.ill-fish.com:3000
-- Bot ID: itsupport
-- Bot Channel: Pablo
-- Bot Alias: Pablo
-
-Say hi to Pablo in a direct message
-Say auswahl
-Say image
 
 
