@@ -1,0 +1,18 @@
+{
+    "id": "b4b596be-0e75-4303-b65b-3f412cf43fb5",
+    "version": "1.0.0",
+    "requiredApiVersion": "^1.30.0",
+    "iconFile": "icon.png",
+    "author": {
+        "name": "Frank Dase",
+        "homepage": "https://www.publicplan.de",
+        "support": "https://www.publicplan.de"
+    },
+    "name": "botpress Connect",
+    "nameSlug": "botpress-connect",
+    "classFile": "BotpressConnectApp.ts",
+    "description": "Connect RocketChat to Botpress. Create a new user in rocket chat and give this user a bot role. Then add the username of this user into the field 'RocketChat Bot Username'. This app uses the botpress Converse API.",
+    "implements": [
+        "IPostMessageSent"
+    ]
+}
