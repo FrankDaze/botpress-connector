@@ -10,7 +10,7 @@ Botpress Connect supports text output for questions and answers, images and quic
 
 https://rocket.chat | https://www.botpress.com | https://www.publicplan.de 
 
-## Hot to setup Botpress Connect
+## How to setup Botpress Connect
 
 To use this app, create a user in Rocket.Chat of type bot. Then go to the app settings of the Botpress Connector. 
 Add the name of you Rocket.Chat user, the ID of you Botpress bot (you see it in the URL of you bot in Botpress) and add the URL of your Botserver. 
