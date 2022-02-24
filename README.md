@@ -6,6 +6,8 @@ Add the name of you Rocket.Chat user, the ID of you Botpress bot (you see it in 
 Save the settings. 
 Now you can start a direct message with you bot user. All your messages are only visible to you. It's like a normal conversations with other chat users.
 
+<img width="669" alt="Bildschirmfoto 2022-02-24 um 09 18 59" src="https://user-images.githubusercontent.com/22960630/155485626-d07fb98d-0eca-4015-bf4a-e234929ae6fa.png">
+
 ## Getting Started
 Now that you have generated a blank default Rocket.Chat App, what are you supposed to do next?
 Start developing! Open up your favorite editor, our recommended one is Visual Studio code,
