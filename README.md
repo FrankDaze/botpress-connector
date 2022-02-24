@@ -1,5 +1,5 @@
 # Botpress Connect
-Connect RocketChat to Botpress
+Connect Rocket.Chat to Botpress
 
 To use this app, create a user in Rocket.Chat of type bot. Then go to the app settings of the Botpress Connector. 
 Add the name of you Rocket.Chat user, the ID of you Botpress bot (you see it in the URL of you bot in Botpress) and add the URL of your Botserver. 
