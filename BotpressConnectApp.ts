@@ -127,6 +127,7 @@ export class BotpressConnectApp extends App implements IPostMessageSent {
         if (!BotpressConnectApp.botRoom) {
             this.initVariables(read);
         }
+
         const sender = await read.getUserReader().getByUsername(BotpressConnectApp.botRoom);
 
         const validRoom = await checkIfValidRoom(read, message, false, BotpressConnectApp.botRoom);
