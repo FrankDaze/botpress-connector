@@ -1,8 +1,8 @@
-{   
+{
     "botpress_server_url": "Botpress Server URL",
     "botpress_bot_id": "Botpress Bot ID",
     "botpress_bot_alias": "Your Bot Name Alias",
     "botpress_rc_channel": "RocketChat Bot Username",
-    "botpress_rc_channel_description": "Please enter the username of your Rocket.Chat Bot User"
-    
+    "botpress_rc_channel_description": "Please enter the username of your Rocket.Chat Bot User",
+    "botpress_reply_in_thread": "Enable Bot Reply In Thread"
 }
