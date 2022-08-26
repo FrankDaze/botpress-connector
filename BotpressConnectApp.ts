@@ -128,6 +128,7 @@ export class BotpressConnectApp extends App implements IPostMessageSent {
             this.initVariables(read);
         }
 
+
         const sender = await read.getUserReader().getByUsername(BotpressConnectApp.botRoom);
 
         const validRoom = await checkIfValidRoom(read, message, false, BotpressConnectApp.botRoom);
@@ -165,6 +166,16 @@ export class BotpressConnectApp extends App implements IPostMessageSent {
         }
 
         const replyInThread = await read.getEnvironmentReader().getSettings().getValueById(AppSetting.ppBotpressReplyInThread);
+
+        const notifiedId: string = "@" + BotpressConnectApp.botRoom;
+        const isNotified = message.text?.includes(notifiedId);
+
+        //if the bot is able to reply in threads, then it should only respond when it is notified  
+        if (replyInThread) {
+            if (!isNotified && !message.threadId) {
+                return;
+            }
+        }
 
         let replyId = id;
 
