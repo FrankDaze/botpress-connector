@@ -169,8 +169,7 @@ export class BotpressConnectApp extends App implements IPostMessageSent {
 
         const notifiedId: string = "@" + BotpressConnectApp.botRoom;
         const isNotified = message.text?.includes(notifiedId);
-
-        //if the bot is able to reply in threads, then it should only respond when it is notified  
+        //If "Reply In Thread" option is selected, then the bot should only respond when it is mentioned  
         if (replyInThread) {
             if (!isNotified && !message.threadId) {
                 return;
