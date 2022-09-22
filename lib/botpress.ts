@@ -14,7 +14,7 @@ export const parseBotAnswer = async (app: IApp, threadId: any, response: any, se
     if (!response.type) {
         return;
     }
-
+    
 
     if (response.type == BotAnswerType.Text) {
         await sendMessage(app, threadId, sender, chatRoom, read, modify, { text: response.text }, botAlias);

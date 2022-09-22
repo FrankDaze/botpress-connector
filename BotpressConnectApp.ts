@@ -149,12 +149,14 @@ export class BotpressConnectApp extends App implements IPostMessageSent {
         // meatadata is available from botpress version > v12.26.7
         // ------------------------------------------------------------
         if (versionDiff) {
+          
             botpressMessage = {
                 "type": "text",
                 "text": text,
                 "metadata": {
                     "sendername": message.sender.name,
-                    "senderusername": message.sender.username
+                    "senderusername": message.sender.username,
+                    "senderemail": message.sender.emails[0]?.address
                 }
             }
         } else {
@@ -165,9 +167,10 @@ export class BotpressConnectApp extends App implements IPostMessageSent {
         }
 
         const replyInThread = await read.getEnvironmentReader().getSettings().getValueById(AppSetting.ppBotpressReplyInThread);
-
+       
         const notifiedId: string = "@" + BotpressConnectApp.botRoom;
         const isNotified = message.text?.includes(notifiedId);
+
         //If "Reply In Thread" option is selected, then the bot should only respond when it is mentioned  
         if (replyInThread) {
             if (!isNotified && !message.threadId) {
@@ -198,11 +201,11 @@ export class BotpressConnectApp extends App implements IPostMessageSent {
                 },
                 content: JSON.stringify(botpressMessage)
             });
-
+             
         if (!data.responses) {
             return;
         }
-
+      
 
         data.responses.map(async (response) => {
             await parseBotAnswer(this, id, response, sender, chatRoom, read, modify, BotpressConnectApp.botAliasName);
